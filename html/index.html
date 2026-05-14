@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>THD Identity</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container" id="identity-container" style="display: none;">
+        <div class="form-card">
+            <div class="header">
+                <h1>Kimlik Oluştur</h1>
+                <p>Los Santos'a yeni bir başlangıç...</p>
+            </div>
+
+            <form id="register-form">
+                <div class="input-group">
+                    <label>Adınız</label>
+                    <input type="text" id="firstname" placeholder="John" required>
+                    <i class="fa-solid fa-user input-icon"></i>
+                </div>
+
+                <div class="input-group">
+                    <label>Soyadınız</label>
+                    <input type="text" id="lastname" placeholder="Doe" required>
+                    <i class="fa-solid fa-signature input-icon"></i>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label>Doğum Tarihi</label>
+                        <input type="date" id="birthdate" min="1900-01-01" max="2005-12-31" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Uyruk</label>
+                        <input type="text" id="nationality" placeholder="Amerikan" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Cinsiyet</label>
+                    <div class="gender-selector">
+                        <div class="gender-option active" data-value="0" onclick="selectGender(this)">
+                            <i class="fa-solid fa-mars"></i> Erkek
+                        </div>
+                        <div class="gender-option" data-value="1" onclick="selectGender(this)">
+                            <i class="fa-solid fa-venus"></i> Kadın
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Karakteri Oluştur <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
